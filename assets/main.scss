@@ -98,6 +98,14 @@ section table tr.danger, table tr.preference, table tr.preference > td.sorting_1
     background-color: #f2dede !important;
 }
 
+span.label.label-default {
+    background-color: gray;
+}
+
+span.label.label-primary {
+    background-color: #f0ad4e;
+}
+
 .notice {
     margin-top: 1.5em;
     padding: .5em 1em;

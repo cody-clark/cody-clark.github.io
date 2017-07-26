@@ -185,7 +185,7 @@ span.soft {
 }
 
 .notice::before { 
-    content: "&#x2139; Note: ";
+    content: "ℹ Note: ";
 }
 
 .info {    
@@ -195,7 +195,7 @@ span.soft {
 }
 
 .info::before { 
-    content: "&#x2705; Info: ";
+    content: "✅ Info: ";
 }
 
 .caution {    
@@ -205,7 +205,7 @@ span.soft {
 }
 
 .caution::before { 
-    content: "&#x26a0; Caution: ";
+    content: "⚠ Caution: ";
 }
 
 .warning {    
@@ -215,5 +215,5 @@ span.soft {
 }
 
 .warning::before { 
-    content: "&#x26d4; Warning: ";
+    content: "⛔ Warning: ";
 }

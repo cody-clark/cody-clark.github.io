@@ -26,5 +26,5 @@ layout: post
 
 {% include callout.html content="This is my warning type callout. It has a border on the left whose color you define by passing a type parameter." type="warning" %}
 
-This is another test.
+This is another test. And the **cool** thing is that *Markdown* still [works](#)!
 {: .notice}

@@ -173,24 +173,46 @@ span.soft {
     border: 1px solid transparent;
     border-radius:4px;
 }
-.notice {
-    
+.notice {    
     color: #31708f;
     background-color: #d9edf7;
     border-color: #dedede;
 }
 
 .notice::before { 
-    content: "ℹ️ Note: ";
+    content: "&#x2139 Note: ";
     font-weight: bold;
 }
 
-.info {
+.info {    
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
 }
 
-.caution {
+.info::before { 
+    content: "&#x2705 Info: ";
+    font-weight: bold;
 }
 
-.warning {
+.caution {    
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
 }
 
+.caution::before { 
+    content: "&#x26a0 Caution: ";
+    font-weight: bold;
+}
+
+.warning {    
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.warning::before { 
+    content: "&#x26d4 Warning: ";
+    font-weight: bold;
+}

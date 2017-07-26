@@ -101,3 +101,13 @@ section table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
 section table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
     background-color: #f2dede !important;
 }
+
+.notice {
+    margin-top: 1.5em;
+    padding: .5em 1em;
+    text-indent: 0;
+    @include font-rem(14);
+    background-color: $color_gray;
+    border: 1px solid $color_pink_swan;
+    @include rounded(3px);
+}

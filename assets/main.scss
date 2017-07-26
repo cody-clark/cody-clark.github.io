@@ -106,6 +106,33 @@ span.label.label-primary {
     background-color: #f0ad4e;
 }
 
+span.projectTitle {
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+span.myLabel {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+span.tagTitle {font-weight: 500;}
+
+span.otherProgrammingLanguages {
+    font-style: normal;
+}
+
+span.muted {color: #666;}
+
+span.red {
+    color: red;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+span.soft {
+    color: #c0c0c0;
+}
+
 .notice {
     margin-top: 1.5em;
     padding: .5em 1em;

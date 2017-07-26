@@ -10,20 +10,6 @@ layout: post
 
 {% include important.html content="This is my important info." %}
 
-
-
-{% include callout.html content="This is my danger type callout. It has a border on the left whose color you define by passing a type parameter." type="danger" %}
-
-{% include callout.html content="This is my default type callout. It has a border on the left whose color you define by passing a type parameter." type="default" %}
-
-{% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %}
-
-{% include callout.html content="This is my success type callout. It has a border on the left whose color you define by passing a type parameter." type="success" %}
-
-{% include callout.html content="This is my info type callout. It has a border on the left whose color you define by passing a type parameter." type="info" %}
-
-{% include callout.html content="This is my warning type callout. It has a border on the left whose color you define by passing a type parameter." type="warning" %}
-
 This is another test. And the **cool** thing is that *Markdown* still [works](#)!
 {: .notice}
 

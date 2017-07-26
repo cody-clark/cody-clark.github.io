@@ -28,3 +28,12 @@ layout: post
 
 This is another test. And the **cool** thing is that *Markdown* still [works](#)!
 {: .notice}
+
+This is another test. And the **cool** thing is that *Markdown* still [works](#)!
+{: .info}
+
+This is another test. And the **cool** thing is that *Markdown* still [works](#)!
+{: .caution}
+
+This is another test. And the **cool** thing is that *Markdown* still [works](#)!
+{: .warning}

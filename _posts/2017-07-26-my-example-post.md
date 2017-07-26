@@ -2,9 +2,7 @@
 layout: post
 ---
 
-{% include note.html content="This is my note. All the content I type here is treated as a single paragraph." %}
-
-{% include note.html content="This is my note." %}
+{% include note.html content="This is my note. But the **sad** thing is that *Markdown* doesn't [work](#)!" %}
 
 {% include tip.html content="This is my tip." %}
 
@@ -12,7 +10,7 @@ layout: post
 
 {% include important.html content="This is my important info." %}
 
-{% include callout.html content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs." type="primary" %}
+{% include callout.html content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. But the **sad** thing is that *Markdown* doesn't [work](#)!" type="primary" %}
 
 {% include callout.html content="This is my danger type callout. It has a border on the left whose color you define by passing a type parameter." type="danger" %}
 

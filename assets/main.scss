@@ -177,6 +177,12 @@ span.soft {
     border-color: #dedede;
 }
 
+.notice::before { 
+    content: "Note: ";
+    color: #31708f;
+    font-weight: bold;
+}
+
 .info {
 }
 

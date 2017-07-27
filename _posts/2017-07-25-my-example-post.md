@@ -3,27 +3,29 @@ layout: post
 ---
 
 ## The Code
-```
+```console
 {% raw %} {% include note.html content="This is my note." %}{% endraw %}
 ```
 
 {% include note.html content="This is my note." %}
 
-```
+```console
 {% raw %} {% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %} {% endraw %}
 ```
 
 {% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %}
 
-```
-This is my note. <br/> {: .notice}
+```console
+This is my note. 
+{: .notice}
 ```
 
 This is my note. 
 {: .notice}
 
-```
-This is my note. <br/> {: .notice1}
+```console
+This is my note.
+{: .notice1}
 ```
 This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> <br/> But otherwise, _Markdown_ still **works**!
 {: .notice1}

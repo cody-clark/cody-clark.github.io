@@ -42,7 +42,7 @@ This is another warning. And the **cool** thing is that *Markdown* still [works]
 
 {% include note.html content="This is my note." %}
 
-{% raw %}This is my note.<br/>{: .notice}{% endraw %}
+This is my note.<br/>{: .notice}
 
 This is my note. 
 {: .notice}

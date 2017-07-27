@@ -175,7 +175,7 @@ span.soft {
     border-radius:4px;
 }
 
-.notice::before, .info::before, .caution::before, .warning::before, .notice1::before, .info1::before, .caution1::before, .warning1::before {
+.notice::before, .info::before, .caution::before, .warning::before {
     font-weight: bold;
 }  
 
@@ -184,7 +184,7 @@ span.soft {
     border-color: #bce8f1;
 }
 
-.notice::before, , .notice1::before { 
+.notice::before { 
     content: "ℹ Note: ";
 }
 
@@ -193,7 +193,7 @@ span.soft {
     border-color: #d6e9c6;
 }
 
-.info::before, .info1::before { 
+.info::before { 
     content: "✅ Info: ";
 }
 
@@ -202,7 +202,7 @@ span.soft {
     border-color: #faebcc;
 }
 
-.caution::before, .caution1::before { 
+.caution::before { 
     content: "⚠ Caution: ";
 }
 
@@ -211,7 +211,7 @@ span.soft {
     border-color: #ebccd1;
 }
 
-.warning::before, .warning1::before { 
+.warning::before { 
     content: "⛔ Warning: ";
 }
 

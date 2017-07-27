@@ -64,5 +64,5 @@ This is my note.
 
 This is my note. <br/> {: .notice1}
 
-This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> But otheriwise, Markdown still works!
+This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> <br/> But otherwise, _Markdown_ still **works**!
 {: .notice1}

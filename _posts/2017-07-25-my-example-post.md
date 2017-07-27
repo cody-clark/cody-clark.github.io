@@ -30,7 +30,7 @@ This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. 
 This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> <br/> But otherwise, _Markdown_ still **works**!
 {: .notice1}
 
-
+## Includes
 ### Callouts
 {% include note.html content="This is my note." %}
 

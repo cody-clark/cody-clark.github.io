@@ -38,11 +38,6 @@ This is another warning. And the **cool** thing is that *Markdown* still [works]
 
 ### Colors
 
-> This is my primary type callout. It has a border on the left whose color you define by passing a type parameter.
->
-> I can be many lines
-{: .notice}
-
 ## The Code
 
 {% raw %} {% include note.html content="This is my note." %}{% endraw %}

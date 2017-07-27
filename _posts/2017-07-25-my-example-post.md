@@ -37,6 +37,17 @@ This is another warning. And the **cool** thing is that *Markdown* still [works]
 {: .warning}
 
 ### Colors
+This is another note. And the **cool** thing is that *Markdown* still [works](#)!
+{: .notice1}
+
+This is another callout. And the **cool** thing is that *Markdown* still [works](#)!
+{: .info1}
+
+This is another callout. And the **cool** thing is that *Markdown* still [works](#)!
+{: .caution1}
+
+This is another warning. And the **cool** thing is that *Markdown* still [works](#)!
+{: .warning1}
 
 ## The Code
 

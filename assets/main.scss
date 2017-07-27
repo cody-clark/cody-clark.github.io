@@ -238,3 +238,19 @@ span.soft {
 .warning1 {
     border-left-color: #d9534f;
 }
+
+.notice::before { 
+    content: "ℹ Note: ";
+}
+
+.info::before1 { 
+    content: "✅ Info: ";
+}
+
+.caution1::before { 
+    content: "⚠ Caution: ";
+}
+
+.warning1::before { 
+    content: "⛔ Warning: ";
+}

@@ -36,11 +36,14 @@ This is another callout. And the **cool** thing is that *Markdown* still [works]
 This is another warning. And the **cool** thing is that *Markdown* still [works](#)!
 {: .warning}
 
-## Differences
-{%raw%}{% include note.html content="This is my note." %}{% endraw%}
+## The Code
+```
+{% include note.html content="This is my note." %}
+```
 {% include note.html content="This is my note." %}
 
-This is my note. <br/> {: .notice}
-
+```This is my note. 
+{: .notice}
+```
 This is my note. 
 {: .notice}

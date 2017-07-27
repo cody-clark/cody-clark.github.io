@@ -214,3 +214,27 @@ span.soft {
 .warning::before { 
     content: "⛔ Warning: ";
 }
+
+.notice1, .info1, .caution1, .warning1 {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.notice 1 {
+    border-left-color: #428bca;
+}
+
+.info1 {
+     border-left-color: #5cb85c;
+}
+
+.caution1 {
+    border-left-color: #f0ad4e;
+}
+
+.warning1 {
+    border-left-color: #d9534f;
+}

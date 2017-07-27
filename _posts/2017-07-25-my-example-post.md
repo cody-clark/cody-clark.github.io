@@ -37,13 +37,12 @@ This is another warning. And the **cool** thing is that *Markdown* still [works]
 {: .warning}
 
 ## The Code
-```
-{% include note.html content="This is my note." %}
-```
+
+{% raw %} {% include note.html content="This is my note." %}{% endraw %}
+
 {% include note.html content="This is my note." %}
 
-```This is my note. 
-{: .notice}
-```
+{% raw %}This is my note.<br/>{: .notice}{% endraw %}
+
 This is my note. 
 {: .notice}

@@ -2,7 +2,7 @@
 layout: post
 ---
 
-## Includes
+## Includes per Tom Johnson
 
 ### Callouts
 {% include note.html content="This is my note." %}

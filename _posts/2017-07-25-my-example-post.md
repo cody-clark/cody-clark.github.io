@@ -2,7 +2,32 @@
 layout: post
 ---
 
-## Includes (per Tom Johnson)
+## The Code
+```
+{% raw %} {% include note.html content="This is my note." %}{% endraw %}
+```
+
+{% include note.html content="This is my note." %}
+
+```
+{% raw %} {% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %} {% endraw %}
+```
+
+{% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %}
+
+```
+This is my note. <br/> {: .notice}
+```
+
+This is my note. 
+{: .notice}
+
+```
+This is my note. <br/> {: .notice1}
+```
+This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> <br/> But otherwise, _Markdown_ still **works**!
+{: .notice1}
+
 
 ### Callouts
 {% include note.html content="This is my note." %}
@@ -47,22 +72,3 @@ This is another callout. And the **cool** thing is that *Markdown* still [works]
 This is another warning. And the **cool** thing is that *Markdown* still [works](#)!
 {: .warning1}
 
-## The Code
-
-{% raw %} {% include note.html content="This is my note." %}{% endraw %}
-
-{% include note.html content="This is my note." %}
-
-{% raw %} {% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %} {% endraw %}
-
-{% include callout.html content="This is my primary type callout. It has a border on the left whose color you define by passing a type parameter." type="primary" %}
-
-This is my note. <br/> {: .notice}
-
-This is my note. 
-{: .notice}
-
-This is my note. <br/> {: .notice1}
-
-This is my note. Unfortunately, you have to use ```<br/>``` for multiple lines. <br/> <br/> But otherwise, _Markdown_ still **works**!
-{: .notice1}

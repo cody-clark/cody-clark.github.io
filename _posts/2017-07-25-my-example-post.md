@@ -77,4 +77,4 @@ This is another warning. And the **cool** thing is that *Markdown* still [works]
 This is my note. 
 
 I didn't read the stlye guide.
-{: .note}
+{: .notice!}

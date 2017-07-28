@@ -74,7 +74,52 @@ This is another callout. And the **cool** thing is that *Markdown* still [works]
 This is another warning. And the **cool** thing is that *Markdown* still [works](#)!
 {: .warning1}
 
-This is my note. 
+
+
+
+
+
+
+
+
+## Callout Formatting
+Callouts help create different rhetorical appeal levels. Our documentation supports three different callouts: note, caution, and warning. 
+
+Use the following syntax to apply style:
+
+```console
+**Note:** This is my note. 
+{: .notice1}
+```
+
+The output is:
+
+**Note:** This is my note. 
+{: .notice1}
+
+Callouts should generally be single sentences but can span multiple lines if you use ```<br/>``` tags.
+
+```console
+**Note:"** This is my note. Use ```<br/>``` to create multiple lines. <br/> <br/> **You** can still use _Markdown_ to ~format text~!
+{: .notice1}
+```
+
+The output is:
+
+**Note:** This is my note. Use ```<br/>``` to create multiple lines. <br/> <br/> **You** can still use _Markdown_ to ~format text~!
+{: .notice1}
+
+Trying to use regular Markdown with multiple lines will **not** work.
+{: .warning1}
+
+```console
+**Note:** This is my note. 
+
+I didn't read the stlye guide.
+{: .notice1}
+```
+
+**Note** This is my note. 
 
 I didn't read the stlye guide.
 {: .notice1}

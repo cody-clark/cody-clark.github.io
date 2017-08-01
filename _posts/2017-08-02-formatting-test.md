@@ -3,7 +3,7 @@ title: Creating a Guestbook
 ---
 
 
-{% capture overview %}
+
 This tutorial shows you how to build a simple, multi-tier web application using Kubernetes and [Docker](https://www.docker.com/). This example consists of the following:
 
 * a web frontend 
@@ -13,21 +13,16 @@ This tutorial shows you how to build a simple, multi-tier web application using 
 **Note:** If you are running this example on a [Google Container Engine](https://cloud.google.com/container-engine/) installation, please read Create a Guestbook with Redis and PHP instead. The basic concepts are the same, but the walkthrough is tailored to a Container Engine setup.
 {: .note}
 
-{% endcapture %}
 
 
-{% capture objectives %}
+
+
 * Start up a redis master.
 * Start up a redis slave.
 * Start up the guestbook frontend.
 * Expose and view the Frontend Service
 * Clean up.
-{% endcapture %}
 
-{% capture prerequisites %}
-
-
-{% include task-tutorial-prereqs.md %}
 
 Download the following configuration files:
 	1. [redis-master-deployment.yaml](#): Redis master deployment 
@@ -36,11 +31,6 @@ Download the following configuration files:
 	4. [redis-slave-service.yaml](#): Redis workers service
   5. [frontend-deployment.yaml](#): the guestbook frontend deployment
   6. [frontend-service.yaml](#): the guestbook frontend service
-
-{% endcapture %}
-
-
-{% capture lessoncontent %}
 
 
 ## Start up the Redis Master
@@ -86,8 +76,6 @@ The guestbook applications needs to communicate to the Redis master to write its
 ```shell
 kubectl create -f redis-master-service.yaml
 ```
-{% include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/redis-master-service.yaml" %}
-
 {:start="2"}
 2. Get the service to verify that the Redis Master Service is running:
 ```shell
@@ -115,8 +103,6 @@ If there are not any replicas running, this Deployment would start the two repli
 ```shell
 kubectl create -f redis-slave-deployment.yaml
 ```
-{% include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/redis-slave-deployment.yaml" %}
-
 {:start="2"}
 2. Get the Pods to verify that the Redis Slave Pods are running:
 
@@ -139,8 +125,6 @@ The guestbook application needs to communicate to Redis workers to read data. To
 ```shell
 kubectl create -f redis-slave-service.yaml
 ```
-{% include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/redis-slave-service.yaml" %}
-
 {:start="2"}
 2. Get the services to verify that the Redis Slave Service is running:
 
@@ -194,8 +178,6 @@ Some cloud providers, like Google Compute Engine or Google Container Engine, sup
 ```shell
 kubectl create -f frontend-service.yaml
 ```
-{% include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/frontend-service.yaml" %}
-
 {:start="2"}
 2. Get the Services to verify that the frontend Service is running:
 
@@ -300,10 +282,6 @@ redis-master-1068406935-3lswp   1/1       Running   0          1h
 redis-slave-2005841000-fpvqc    1/1       Running   0          1h
 redis-slave-2005841000-phfv9    1/1       Running   0          1h
 ```
-{% endcapture %}
-
-
-{% capture cleanup %}
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 
 1. Run the following command to delete all Pods, Deployments, and Services.
@@ -333,14 +311,6 @@ The response should be this:
 ```shell
 No resources found.
 ```
-{% endcapture %}
-
-
-
-{% capture whatsnext %}
-{% endcapture %}
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)
-
-{% include templates/tutorial.md %}
 

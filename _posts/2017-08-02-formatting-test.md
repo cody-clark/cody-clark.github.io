@@ -6,7 +6,7 @@
 
 include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml"
 
-
+{:start="3"}
 3. Query the list of Pods to verify that the Redis Master Pod is running:
 
         kubectl get pods
@@ -29,10 +29,11 @@ The guestbook applications needs to communicate to the Redis master to write its
 
 1. Apply the Redis Master Service from the following `redis-master-service.yaml` file: 
 
-        kubectl apply -f redis-master-service.yaml
+            kubectl apply -f redis-master-service.yaml
 
 include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
 
+{:start="2"}
 2. Query the list of Services to verify that the Redis Master Service is running:
 
         kubectl get service

@@ -43,7 +43,6 @@ The guestbook application uses Redis to store its data. It writes its data to a 
 ```shell
 kubectl create -f redis-master-deployment.yaml
 ```
-{% include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/redis-master-deployment.yaml" %}
 
 {:start="3"}
 3. Get the Pods to verify that the Redis Master Pod is running:

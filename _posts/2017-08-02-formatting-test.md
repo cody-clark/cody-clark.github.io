@@ -148,7 +148,6 @@ This tutorial uses a simple PHP server that is configured to talk to either the 
 ```shell
 kubectl create -f frontend-deployment.yaml
 ```
-{% include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials//docs/tutorials/stateless-application/frontend-deployment.yaml" %}
 
 {:start="2"}
 2. Get the Pods to verify that the three frontend replicas are running:

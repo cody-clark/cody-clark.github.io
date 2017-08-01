@@ -18,8 +18,6 @@ This tutorial shows you how to build a simple, multi-tier web application using 
 {: .note}
 
 
-
-{% capture objectives %}
 * Start up a redis master.
 * Start up a redis slave.
 * Start up the guestbook frontend.
@@ -316,9 +314,9 @@ redis-slave-2005841000-fpvqc    1/1       Running   0          1h
 redis-slave-2005841000-phfv9    1/1       Running   0          1h
 ```
 
-{% endcapture %}
 
-{% capture cleanup %}
+
+
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 
 1. Run the following command to delete all Pods, Deployments, and Services.
@@ -349,10 +347,9 @@ The response should be this:
 ```shell
 No resources found.
 ```
-{% endcapture %}
 
-{% capture whatsnext %}
-{% endcapture %}
+
+
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)
 

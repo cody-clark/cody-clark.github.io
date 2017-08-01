@@ -18,25 +18,25 @@ This tutorial shows you how to build a simple, multi-tier web application using 
 {: .note}
 
 
+
+
 * Start up a redis master.
 * Start up a redis slave.
 * Start up the guestbook frontend.
 * Expose and view the Frontend Service
 * Clean up.
-
+}
 
 
 
 include task-tutorial-prereqs.md
 Download the following configuration files:
-1. [redis-master-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-deployment.yaml
-2. [redis-master-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-service.yaml
+1. [redis-master-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-deployment.yaml)
+2. [redis-master-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-service.yaml)
 3. [redis-slave-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-deployment.yaml)
 4. [redis-slave-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-service.yaml)
 5. [frontend-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-deployment.yaml)
 6. [frontend-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-service.yaml)
-
-
 
 
 
@@ -84,7 +84,6 @@ The guestbook applications needs to communicate to the Redis master to write its
 ```shell
 kubectl create -f redis-master-service.yaml
 ```
-
 include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
 
 {:start="2"}
@@ -126,14 +125,12 @@ kubectl get pods
 ```
 
 The response should be similar to this:
-
 ```shell
 NAME                            READY     STATUS              RESTARTS   AGE
 redis-master-1068406935-3lswp   1/1       Running             0          1m
 redis-slave-2005841000-fpvqc    0/1       ContainerCreating   0          6s
 redis-slave-2005841000-phfv9    0/1       ContainerCreating   0          6s
 ```
-
 ### Creating the Redis Slave Service
 The guestbook application needs to communicate to Redis workers to read data. To make the Redis workers discoverable, you need to set up a Service. A Service provides transparent load balancing to a set of Pods.
 
@@ -143,7 +140,7 @@ The guestbook application needs to communicate to Redis workers to read data. To
 kubectl create -f redis-slave-service.yaml
 ```
 
-include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml" 
+include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml"
 
 {:start="2"}
 2. Get the Services to verify that the Redis Slave Service is running:
@@ -153,7 +150,6 @@ kubectl get services
 ```
 
 The response should be similar to this:
-
 ```shell
 NAME           CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
 kubernetes     10.0.0.1     <none>        443/TCP    2m
@@ -171,7 +167,7 @@ This tutorial uses a simple PHP server that is configured to talk to either the 
 kubectl create -f frontend-deployment.yaml
 ```
 
-include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml" 
+include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml"
 
 {:start="2"}
 2. Get the Pods to verify that the three frontend replicas are running:
@@ -190,7 +186,7 @@ frontend-3823415956-w9gbt   1/1       Running   0          54s
 ```
 
 ### Creating the Frontend Service
-The `redis-slave` and `redis-master` Services you created are only accessible within the container cluster because the default type for a Service is `[ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types)`. `ClusterIP` provides a single IP address for the set of Pods the Service is pointing to. This IP address is accessible only within the cluster.
+The `redis-slave` and `redis-master` Services you created are only accessible within the container cluster because the default type for a Service is [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types). `ClusterIP` provides a single IP address for the set of Pods the Service is pointing to. This IP address is accessible only within the cluster.
 
 If you want guests to be able to access your guestbook, you must configure the frontend Service to be externally visible, so a client can request the Service from outside the container cluster. Minikube can only expose Services through `NodePort`.  
 
@@ -275,7 +271,7 @@ kubectl scale deployment frontend --replicas=5
 ```shell
 kubectl get pods
 ```
-The response should look similar to this: 
+    The response should look similar to this: 
 
 ```shel
 NAME                            READY     STATUS    RESTARTS   AGE
@@ -303,7 +299,7 @@ kubectl scale deployment frontend --replicas=2
 kubectl get pods
 ```
 
-The response should look similar to this:
+    The response should look similar to this:
 
 ```shell
 NAME                            READY     STATUS    RESTARTS   AGE
@@ -315,8 +311,6 @@ redis-slave-2005841000-phfv9    1/1       Running   0          1h
 ```
 
 
-
-
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 
 1. Run the following command to delete all Pods, Deployments, and Services.
@@ -324,7 +318,6 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
 ```shell
 kubectl delete deployments,services -l "app in (redis, guestbook)"
 ```
-
 The response should be this:
 
 ```shell
@@ -348,9 +341,11 @@ The response should be this:
 No resources found.
 ```
 
-
-
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)
 
 include templates/tutorial.md
+
+<!-- BEGIN MUNGE: GENERATED_ANALYTICS -->
+[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/examples/guestbook/README.md?pixel)]()
+<!-- END MUNGE: GENERATED_ANALYTICS -->

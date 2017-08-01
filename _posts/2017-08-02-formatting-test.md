@@ -4,7 +4,7 @@
 
         kubectl apply -f redis-master-deployment.yaml
 
-{% include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml" %}
+include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml"
 
 {:start="3"}
 3. Query the list of Pods to verify that the Redis Master Pod is running:

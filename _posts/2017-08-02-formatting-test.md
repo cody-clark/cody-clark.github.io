@@ -183,7 +183,7 @@ Scaling up or down is easy because your servers are defined as a Service that us
 
         kubectl get pods
 
-The response should look similar to this: 
+   The response should look similar to this: 
 
         NAME                            READY     STATUS    RESTARTS   AGE
         frontend-3823415956-70qj5       1/1       Running   0          5s

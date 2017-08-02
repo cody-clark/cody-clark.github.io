@@ -19,12 +19,10 @@ include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/d
 
 4. Run the following command to view the logs from the Redis Master Pod:
 
-**Note:** Replace POD-NAME with the name of your pod
-   {: .notice1}
-
         kubectl logs -f POD-NAME.
 
-   Ctrl + C
+**Note:** Replace POD-NAME with the name of your pod
+{: .notice1}
 
 ### Creating the Redis Master Service
 The guestbook applications needs to communicate to the Redis master to write its data. You need to apply a [Service](https://kubernetes.io/docs/concepts/services-networking/service/) to proxy the traffic to the Redis master Pod.

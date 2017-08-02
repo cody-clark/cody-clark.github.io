@@ -1,3 +1,29 @@
+## Overview
+This tutorial shows you how to build and deploy a simple, multi-tier web application using Kubernetes and [Docker](https://www.docker.com/). This example consists of the following components:
+
+* A single-instance [Redis](https://redis.io/) master to store guestbook entries 
+* Multiple replicated Redis instances to serve reads 
+* Multiple web frontend instances
+
+## Objectives
+* Start up a Redis master.
+* Start up Redis slaves.
+* Start up the guestbook frontend.
+* Expose and view the Frontend Service.
+* Clean up.
+
+## Prerequisites
+Download the following configuration files:
+1. [redis-master-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-deployment.yaml)
+2. [redis-master-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-service.yaml)
+3. [redis-slave-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-deployment.yaml)
+4. [redis-slave-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-service.yaml)
+5. [frontend-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-deployment.yaml)
+6. [frontend-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-service.yaml)
+
+## Start up the Redis Master
+The guestbook application uses Redis to store its data. It writes its data to a Redis master instance and reads data from multiple Redis worker (slave) instances.
+
 ### Creating the Redis Master Deployment
 1. Launch a terminal window in the directory you downloaded the manifest files.
 2. Apply the Redis Master Deployment from the `redis-master-deployment.yaml` file:
@@ -210,6 +236,7 @@ Scaling up or down is easy because your servers are defined as a Service that us
         redis-slave-2005841000-fpvqc    1/1       Running   0          1h
         redis-slave-2005841000-phfv9    1/1       Running   0          1h
 
+## Clean up
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 
 1. Run the following command to delete all Pods, Deployments, and Services.
@@ -233,5 +260,6 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
 
         No resources found.
 
+## Next Steps
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)

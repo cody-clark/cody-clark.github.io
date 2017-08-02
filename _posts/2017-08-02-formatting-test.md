@@ -19,9 +19,9 @@ include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/d
 
 4. Run the following command to view the logs from the Redis Master Pod:
 
-        kubectl logs -f POD-NAME.
+        kubectl logs -f POD-NAME
 
-**Note:** Replace POD-NAME with the name of your pod
+**Note:** Replace POD-NAME with the name of your Pod.
 {: .notice1}
 
 ### Creating the Redis Master Service

@@ -31,7 +31,7 @@ The guestbook applications needs to communicate to the Redis master to write its
 
 1. Apply the Redis Master Service from the following `redis-master-service.yaml` file: 
 
-            kubectl apply -f redis-master-service.yaml
+        kubectl apply -f redis-master-service.yaml
 
 include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
 
@@ -40,7 +40,7 @@ include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs
 
         kubectl get service
 
-    The response should be similar to this:
+   The response should be similar to this:
 
         NAME           CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
         kubernetes     10.0.0.1     <none>        443/TCP    1m
@@ -65,7 +65,7 @@ include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/do
 
         kubectl get pods
 
-  The response should be similar to this:
+   The response should be similar to this:
 
         NAME                            READY     STATUS              RESTARTS   AGE
         redis-master-1068406935-3lswp   1/1       Running             0          1m
@@ -86,7 +86,7 @@ include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/
 
         kubectl get services
 
-  The response should be similar to this:
+   The response should be similar to this:
 
         NAME           CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
         kubernetes     10.0.0.1     <none>        443/TCP    2m
@@ -195,7 +195,6 @@ The response should look similar to this:
         redis-slave-2005841000-fpvqc    1/1       Running   0          55m
         redis-slave-2005841000-phfv9    1/1       Running   0          55m
 
-{:start="3"}
 3. Run the following command to scale down the number of frontend Pods:
 
         kubectl scale deployment frontend --replicas=2
@@ -206,12 +205,12 @@ The response should look similar to this:
 
    The response should look similar to this:
 
-NAME                            READY     STATUS    RESTARTS   AGE
-frontend-3823415956-k22zn       1/1       Running   0          1h
-frontend-3823415956-w9gbt       1/1       Running   0          1h
-redis-master-1068406935-3lswp   1/1       Running   0          1h
-redis-slave-2005841000-fpvqc    1/1       Running   0          1h
-redis-slave-2005841000-phfv9    1/1       Running   0          1h
+        NAME                            READY     STATUS    RESTARTS   AGE
+        frontend-3823415956-k22zn       1/1       Running   0          1h
+        frontend-3823415956-w9gbt       1/1       Running   0          1h
+        redis-master-1068406935-3lswp   1/1       Running   0          1h
+        redis-slave-2005841000-fpvqc    1/1       Running   0          1h
+        redis-slave-2005841000-phfv9    1/1       Running   0          1h
 
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 

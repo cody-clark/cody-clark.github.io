@@ -19,7 +19,7 @@ include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/d
 
 4. Run the following command to view the logs from the Redis Master Pod:
 
-**Note:** Replace POD-NAME with the name of your pod
+   **Note:** Replace POD-NAME with the name of your pod
 {: .notice1}
 
         kubectl logs -f POD-NAME
@@ -134,7 +134,7 @@ include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tut
 
         kubectl get services 
 
-  The response should be similar to this:
+   The response should be similar to this:
 
         NAME           CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
         frontend       10.0.0.112   <nodes>       80:31323/TCP   6s

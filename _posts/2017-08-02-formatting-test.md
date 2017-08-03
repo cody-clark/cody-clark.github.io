@@ -30,16 +30,15 @@ The guestbook application uses Redis to store its data. It writes its data to a 
 
        kubectl apply -f redis-master-deployment.yaml
 
-include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml"
+   include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml"
 
-{:start="3"}
 3. Query the list of Pods to verify that the Redis Master Pod is running:
 
        kubectl get pods
 
    The response should be similar to this:
 
-       NAME                            READY     STATUS    RESTARTS   AGE
+vNAME                            READY     STATUS    RESTARTS   AGE
        redis-master-1068406935-3lswp   1/1       Running   0          28s
 
 
@@ -57,9 +56,8 @@ The guestbook applications needs to communicate to the Redis master to write its
 
        kubectl apply -f redis-master-service.yaml
 
-include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
+   include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
 
-{:start="2"}
 2. Query the list of Services to verify that the Redis Master Service is running:
 
        kubectl get service
@@ -82,9 +80,8 @@ If there are not any replicas running, this Deployment would start the two repli
 
        kubectl apply -f redis-slave-deployment.yaml
 
-include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-deployment.yaml"
+   include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-deployment.yaml"
 
-{:start="2"}
 2. Query the list of Pods to verify that the Redis Slave Pods are running:
 
        kubectl get pods
@@ -103,9 +100,8 @@ The guestbook application needs to communicate to Redis workers to read data. To
 
        kubectl apply -f redis-slave-service.yaml
 
-include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml"
+   include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml"
 
-{:start="2"}
 2. Query the list of Services to verify that the Redis Slave Service is running:
 
        kubectl get services
@@ -125,9 +121,8 @@ This tutorial uses a simple PHP server that is configured to talk to either the 
 
        kubectl apply -f frontend-deployment.yaml
 
-include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml"
+   include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml"
 
-{:start="2"}
 2. Query the list of Pods to verify that the three frontend replicas are running:
 
        kubectl get pods -l app=guestbook -l tier=frontend
@@ -151,9 +146,8 @@ If you want guests to be able to access your guestbook, you must configure the f
 
        kubectl apply -f frontend-service.yaml
         
-include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-service.yaml"
+   include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-service.yaml"
 
-{:start="2"}
 2. Query the list of Services to verify that the frontend Service is running:
 
        kubectl get services 
@@ -177,7 +171,6 @@ Once the frontend Service is running, you need to find the IP address to view yo
 
        http://192.168.99.100:31323
 
-{:start="2"}
 2. Copy the IP address, and load the page in your browser to view your guestbook.
 
 ### Viewing the Frontend Service via `LoadBalancer`
@@ -192,7 +185,6 @@ Once the frontend Service is running, you need to find the IP address to view yo
        NAME       CLUSTER-IP      EXTERNAL-IP        PORT(S)        AGE
        frontend   10.51.242.136   109.197.92.229     80:32372/TCP   1m
 
-{:start="2"}
 2. Copy the External IP address, and load the page.
 
 ## Scale the Web Frontend 
@@ -202,7 +194,6 @@ Scaling up or down is easy because your servers are defined as a Service that us
 
        kubectl scale deployment frontend --replicas=5
 
-{:start="2"}
 2. Query the list of Pods to verify the number of frontend Pods running:
 
        kubectl get pods

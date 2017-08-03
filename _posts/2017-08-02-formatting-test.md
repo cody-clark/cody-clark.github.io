@@ -280,13 +280,3 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
 
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)
-
-
-1. Preheat oven to 350˚F
-       
-1. Prepare the batter, and pour into springform pan.
-          
-  **Note:** Grease the pan for best results. 
-  {: .notice1}
-          
-1. Bake for 20-25 minutes or until set.

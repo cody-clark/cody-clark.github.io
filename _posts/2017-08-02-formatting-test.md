@@ -55,7 +55,7 @@ The manifest file, included below, specifies a Deployment controller that runs a
        kubectl logs -f POD-NAME
 
 **Note:** Replace POD-NAME with the name of your Pod.
-{: .note}
+{: .notice1}
 
 ### Creating the Redis Master Service
 
@@ -68,7 +68,7 @@ The guestbook applications needs to communicate to the Redis master to write its
    include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml" %}
 
 **Note:** This manifest file creates a Service named `redis-master` with a set of labels that match the labels previously defined, so the Service routes network traffic to the Redis master Pod.   
-{: .note}
+{: .notice1}
 
 2. Query the list of Services to verify that the Redis Master Service is running:
 
@@ -158,7 +158,7 @@ The `redis-slave` and `redis-master` Services you applied are only accessible wi
 If you want guests to be able to access your guestbook, you must configure the frontend Service to be externally visible, so a client can request the Service from outside the container cluster. Minikube can only expose Services through `NodePort`.  
 
 **Note:** Some cloud providers, like Google Compute Engine or Google Container Engine, support external load balancers. If your cloud provider supports load balancers and you want to use it, simply delete or comment out `type: NodePort`, and uncomment `type: LoadBalancer`. 
-{: note}
+{: notice1}
 
 1. Apply the frontend Service from the following `frontend-service.yaml` file:
 

@@ -1,4 +1,5 @@
 ## Overview
+
 This tutorial shows you how to build and deploy a simple, multi-tier web application using Kubernetes and [Docker](https://www.docker.com/). This example consists of the following components:
 
 * A single-instance [Redis](https://redis.io/) master to store guestbook entries 
@@ -6,6 +7,7 @@ This tutorial shows you how to build and deploy a simple, multi-tier web applica
 * Multiple web frontend instances
 
 ## Objectives
+
 * Start up a Redis master.
 * Start up Redis slaves.
 * Start up the guestbook frontend.
@@ -13,24 +15,30 @@ This tutorial shows you how to build and deploy a simple, multi-tier web applica
 * Clean up.
 
 ## Prerequisites
+
+   include task-tutorial-prereqs.md %}
 Download the following configuration files:
-1. [redis-master-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-deployment.yaml)
-2. [redis-master-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-master-service.yaml)
-3. [redis-slave-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-deployment.yaml)
-4. [redis-slave-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/redis-slave-service.yaml)
-5. [frontend-deployment.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-deployment.yaml)
-6. [frontend-service.yaml](https://kubernetes.io/docs/tutorials//docs/tutorials/stateless-application/frontend-service.yaml)
+1. [redis-master-deployment.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml)
+2. [redis-master-service.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml)
+3. [redis-slave-deployment.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/redis-slave-deployment.yaml)
+4. [redis-slave-service.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml)
+5. [frontend-deployment.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml)
+6. [frontend-service.yaml](https://kubernetes.io/docs/tutorials/docs/tutorials/stateless-application/frontend-service.yaml)
 
 ## Start up the Redis Master
-The guestbook application uses Redis to store its data. It writes its data to a Redis master instance and reads data from multiple Redis worker (slave) instances.
+
+The guestbook application uses Redis to store its data. It writes its data to a Redis master instance and reads data from multiple Redis slave instances.
 
 ### Creating the Redis Master Deployment
+
+The manifest file, included below, specifies a Deployment controller that runs a single replica Redis master Pod.
+
 1. Launch a terminal window in the directory you downloaded the manifest files.
 2. Apply the Redis Master Deployment from the `redis-master-deployment.yaml` file:
 
        kubectl apply -f redis-master-deployment.yaml
-
-   include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml"
+        
+   include code.html language="yaml" file="redis-master-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-deployment.yaml" %}
 
 3. Query the list of Pods to verify that the Redis Master Pod is running:
 
@@ -38,7 +46,7 @@ The guestbook application uses Redis to store its data. It writes its data to a 
 
    The response should be similar to this:
 
-vNAME                            READY     STATUS    RESTARTS   AGE
+       NAME                            READY     STATUS    RESTARTS   AGE
        redis-master-1068406935-3lswp   1/1       Running   0          28s
 
 
@@ -47,16 +55,20 @@ vNAME                            READY     STATUS    RESTARTS   AGE
        kubectl logs -f POD-NAME
 
 **Note:** Replace POD-NAME with the name of your Pod.
-{: .notice1}
+{: .note}
 
 ### Creating the Redis Master Service
-The guestbook applications needs to communicate to the Redis master to write its data. You need to apply a [Service](https://kubernetes.io/docs/concepts/services-networking/service/) to proxy the traffic to the Redis master Pod.
+
+The guestbook applications needs to communicate to the Redis master to write its data. You need to apply a [Service](https://kubernetes.io/docs/concepts/services-networking/service/) to proxy the traffic to the Redis master Pod. A Service defines a policy to access the Pods.
 
 1. Apply the Redis Master Service from the following `redis-master-service.yaml` file: 
 
        kubectl apply -f redis-master-service.yaml
 
-   include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml"
+   include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml" %}
+
+**Note:** This manifest file creates a Service named `redis-master` with a set of labels that match the labels previously defined, so the Service routes network traffic to the Redis master Pod.   
+{: .note}
 
 2. Query the list of Services to verify that the Redis Master Service is running:
 
@@ -69,9 +81,11 @@ The guestbook applications needs to communicate to the Redis master to write its
        redis-master   10.0.0.151   <none>        6379/TCP   8s
 
 ## Start up the Redis Slaves
+
 Although the Redis master is a single pod, you can make it highly available to meet traffic demands by adding replica Redis workers.
 
 ### Creating the Redis Slave Deployment
+
 Deployments scale based off of the configurations set in the manifest file. In this case, the Deployment object specifies two replicas. 
 
 If there are not any replicas running, this Deployment would start the two replicas on your container cluster. Conversely, if there are more than two replicas are running, it would scale down until two replicas are running. 
@@ -80,7 +94,7 @@ If there are not any replicas running, this Deployment would start the two repli
 
        kubectl apply -f redis-slave-deployment.yaml
 
-   include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-deployment.yaml"
+   include code.html language="yaml" file="redis-slave-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-deployment.yaml" %}
 
 2. Query the list of Pods to verify that the Redis Slave Pods are running:
 
@@ -92,15 +106,16 @@ If there are not any replicas running, this Deployment would start the two repli
        redis-master-1068406935-3lswp   1/1       Running             0          1m
        redis-slave-2005841000-fpvqc    0/1       ContainerCreating   0          6s
        redis-slave-2005841000-phfv9    0/1       ContainerCreating   0          6s
-
+        
 ### Creating the Redis Slave Service
+
 The guestbook application needs to communicate to Redis workers to read data. To make the Redis workers discoverable, you need to set up a Service. A Service provides transparent load balancing to a set of Pods.
 
 1. Apply the Redis Slave Service from the following `redis-slave-service.yaml` file:
 
        kubectl apply -f redis-slave-service.yaml
 
-   include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml"
+   include code.html language="yaml" file="redis-slave-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-slave-service.yaml" %}
 
 2. Query the list of Services to verify that the Redis Slave Service is running:
 
@@ -114,14 +129,16 @@ The guestbook application needs to communicate to Redis workers to read data. To
        redis-slave    10.0.0.223   <none>        6379/TCP   6s
 
 ## Set up and Expose the Guestbook Frontend
-This tutorial uses a simple PHP server that is configured to talk to either the slave or master Services, depending on whether the client request is a read or a write. It exposes a simple JSON interface, and serves a jQuery-Ajax-based UX.
+
+The guestbook application has a web frontend serving the HTTP requests written in PHP. It is configured to connect to the 'redis-master' Service for write requests and the 'redis-slave' service for Read requests.
 
 ### Creating the Guestbook Frontend Deployment
+
 1. Apply the frontend Deployment from the following `frontend-deployment.yaml` file:
 
        kubectl apply -f frontend-deployment.yaml
 
-   include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml"
+   include code.html language="yaml" file="frontend-deployment.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-deployment.yaml" %}
 
 2. Query the list of Pods to verify that the three frontend replicas are running:
 
@@ -135,18 +152,19 @@ This tutorial uses a simple PHP server that is configured to talk to either the 
        frontend-3823415956-w9gbt   1/1       Running   0          54s
 
 ### Creating the Frontend Service
+
 The `redis-slave` and `redis-master` Services you applied are only accessible within the container cluster because the default type for a Service is [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types). `ClusterIP` provides a single IP address for the set of Pods the Service is pointing to. This IP address is accessible only within the cluster.
 
 If you want guests to be able to access your guestbook, you must configure the frontend Service to be externally visible, so a client can request the Service from outside the container cluster. Minikube can only expose Services through `NodePort`.  
 
 **Note:** Some cloud providers, like Google Compute Engine or Google Container Engine, support external load balancers. If your cloud provider supports load balancers and you want to use it, simply delete or comment out `type: NodePort`, and uncomment `type: LoadBalancer`. 
-{: .notice1}
+{: note}
 
 1. Apply the frontend Service from the following `frontend-service.yaml` file:
 
        kubectl apply -f frontend-service.yaml
         
-   include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-service.yaml"
+   include code.html language="yaml" file="frontend-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/frontend-service.yaml" %}
 
 2. Query the list of Services to verify that the frontend Service is running:
 
@@ -161,6 +179,7 @@ If you want guests to be able to access your guestbook, you must configure the f
        redis-slave    10.0.0.223   <none>        6379/TCP       1m
 
 ### Viewing the Frontend Service via `NodePort`
+
 Once the frontend Service is running, you need to find the IP address to view your Guestbook.
 
 1. Run the following command to get the IP address for the frontend Service.
@@ -174,6 +193,7 @@ Once the frontend Service is running, you need to find the IP address to view yo
 2. Copy the IP address, and load the page in your browser to view your guestbook.
 
 ### Viewing the Frontend Service via `LoadBalancer`
+
 Once the frontend Service is running, you need to find the IP address to view your Guestbook.
 
 1. Run the following command to get the IP address for the frontend Service.
@@ -188,6 +208,7 @@ Once the frontend Service is running, you need to find the IP address to view yo
 2. Copy the External IP address, and load the page.
 
 ## Scale the Web Frontend 
+
 Scaling up or down is easy because your servers are defined as a Service that uses a Deployment controller.
 
 1. Run the following command to scale up the number of frontend Pods:
@@ -226,13 +247,17 @@ Scaling up or down is easy because your servers are defined as a Service that us
        redis-master-1068406935-3lswp   1/1       Running   0          1h
        redis-slave-2005841000-fpvqc    1/1       Running   0          1h
        redis-slave-2005841000-phfv9    1/1       Running   0          1h
-
+        
 ## Clean up
+
 Deleting the Deployments and Services also deletes any running Pods. Use labels to delete multiple resources with one command.
 
-1. Run the following command to delete all Pods, Deployments, and Services.
+1. Run the following commands to delete all Pods, Deployments, and Services.
 
-       kubectl delete deployments,services -l "app in (redis, guestbook)"
+       kubectl delete deployment -l app=redis
+       kubectl delete service -l app=redis
+       kubectl delete deployment -l app=guestbook
+       kubectl delete service -l app=guestbook
 
    The response should be this:
 
@@ -250,7 +275,8 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
    The response should be this: 
 
        No resources found.
+        
+## What's next
 
-## Next Steps
 * Read more about [connecting applications](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 * Read more about [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)

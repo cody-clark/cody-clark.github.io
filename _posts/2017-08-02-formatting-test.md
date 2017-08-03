@@ -285,5 +285,5 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
 1. Preheat oven to 350˚F
 2. Prepare the batter, and pour into springform pan.
    **Note:** Grease the pan for best results. 
-   {: .note}
+   {: .notice1}
 3. Bake for 20-25 minutes or until set.

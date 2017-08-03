@@ -67,7 +67,7 @@ The guestbook applications needs to communicate to the Redis master to write its
 
    include code.html language="yaml" file="redis-master-service.yaml" ghlink="/docs/tutorials/docs/tutorials/stateless-application/redis-master-service.yaml" %}
 
-**Note:** This manifest file creates a Service named `redis-master` with a set of labels that match the labels previously defined, so the Service routes network traffic to the Redis master Pod.   
+   **Note:** This manifest file creates a Service named `redis-master` with a set of labels that match the labels previously defined, so the Service routes network traffic to the Redis master Pod.   
 {: .notice1}
 
 2. Query the list of Services to verify that the Redis Master Service is running:

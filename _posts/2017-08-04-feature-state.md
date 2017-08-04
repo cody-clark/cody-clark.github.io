@@ -1,4 +1,4 @@
-{% include feature-state-stable.md %}
+{% assign for_k8s_version="v1.4" %}{% include feature-state-stable.md %}
 
 ## Cool New Feature
 

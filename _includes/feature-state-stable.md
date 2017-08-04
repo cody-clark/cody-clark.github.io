@@ -8,3 +8,4 @@ This feature is *stable*, meaning:
 {% endcapture %}
 
 **FEATURE STATE:** `Kubernetes {{ for_k8s_version | default: page.version }}` {% include feature-dialog.md %}
+{: .stable}

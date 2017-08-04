@@ -251,6 +251,7 @@ span.soft {
 
 .beta::before, .stable::before, .alpha::before, .deprecated::before {
     font-weight: bold;
+    content: **Feature State: **
 }  
 
 .beta {    
@@ -258,7 +259,7 @@ span.soft {
     border-color: #bce8f1;
 }
 
-.beta::before { 
+.beta::after { 
     content: "Beta: ";
 }
 
@@ -267,8 +268,8 @@ span.soft {
     border-color: #d6e9c6;
 }
 
-.stable::before { 
-    content: "Stable: ";
+.stable::after { 
+    content: "Stable";
 }
 
 .alpha {    
@@ -276,8 +277,8 @@ span.soft {
     border-color: #faebcc;
 }
 
-.alpha::before { 
-    content: "Alpha: ";
+.alpha::after { 
+    content: "Alpha";
 }
 
 .deprecated {    
@@ -285,6 +286,6 @@ span.soft {
     border-color: #ebccd1;
 }
 
-.deprecated::before { 
-    content: "⛔ Deprecated: ";
+.deprecated::after { 
+    content: "Deprecated: ";
 }

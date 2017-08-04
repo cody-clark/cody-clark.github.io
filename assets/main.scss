@@ -249,10 +249,6 @@ span.soft {
     border-radius:4px;
 }
 
-.beta::before, .stable::before, .alpha::before, .deprecated::before {
-    font-weight: bold;
-}  
-
 .beta {    
     color: #31708f;
     border-color: #bce8f1;
@@ -267,7 +263,7 @@ span.soft {
     border-color: #faebcc;
 }
 
-.deprecated {    
+.deprecated {
     color: #a94442;
     border-color: #ebccd1;
 }

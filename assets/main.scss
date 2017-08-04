@@ -251,7 +251,7 @@ span.soft {
 
 .beta::before, .stable::before, .alpha::before, .deprecated::before {
     font-weight: bold;
-    content: **Feature State: **
+    content: **Feature State: **;
 }  
 
 .beta {    

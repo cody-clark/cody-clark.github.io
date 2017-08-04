@@ -256,19 +256,10 @@ span.soft {
 .beta {    
     color: #31708f;
     border-color: #bce8f1;
-}
-
-.beta::after { 
-    content: "Beta: ";
-}
 
 .stable {    
     color: #3c763d;
     border-color: #d6e9c6;
-}
-
-.stable::after { 
-    content: "Stable";
 }
 
 .alpha {    
@@ -276,15 +267,7 @@ span.soft {
     border-color: #faebcc;
 }
 
-.alpha::after { 
-    content: "Alpha";
-}
-
 .deprecated {    
     color: #a94442;
     border-color: #ebccd1;
-}
-
-.deprecated::after { 
-    content: "Deprecated: ";
 }

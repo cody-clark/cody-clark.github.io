@@ -1,5 +1,6 @@
-: {% assign for_k8s_version="v1.4" %}{% include feature-state-stable.md %}
-{: .stable}
+<div class="stable">
+{% assign for_k8s_version="v1.4" %}{% include feature-state-stable.md %}
+</div>
 
 ## Cool New Feature
 

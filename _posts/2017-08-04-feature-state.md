@@ -13,7 +13,7 @@ Deep v pickled taiyaki mixtape chillwave PBR&B pok pok dreamcatcher. Mustache de
 1. Blah blah blah
 
     **Note:** The following sample is an excerpt of the StatefulSet file.
-    {: .note}
+    {: .notice}
 
     ```yaml   
     # Please edit the object below. Lines beginning with a '#' will be ignored,

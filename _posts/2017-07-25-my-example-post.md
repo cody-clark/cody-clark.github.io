@@ -73,3 +73,6 @@ This is another callout. And the **cool** thing is that *Markdown* still [works]
 
 This is another warning. And the **cool** thing is that *Markdown* still [works](#)!
 {: .warning1}
+
+    **Note:** This is my note.
+    {: .note}

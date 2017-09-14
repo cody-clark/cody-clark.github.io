@@ -18,7 +18,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 1. The Ridged Handle
 1. The Technic Remover
 1. The Lower Brick/Plate Remover
-1. The Uppoer Brick/Plate Remover
+1. The Upper Brick/Plate Remover
 
 ### What are its principal parts?
 
@@ -42,7 +42,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Stud
 * Function: Separates Technic Axles and Pins from Lego Beams and Gears 
 
-![Technic Remover](/pictures/gif_02.gif)
+![Technic Remover](/pictures/gif_2.gif)
 
 #### The Lower Brick/Plate Remover:
 
@@ -50,7 +50,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Plate
 * Function: Separates Plates from Bricks and other studded pieces 
 
-![Lower Remover](/pictures/gif_03.gif)
+![Lower Remover](/pictures/gif_3.gif)
 
 #### The Upper Brick/Plate Remover:
 
@@ -58,7 +58,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Plate
 * Function: Separates Plates from Bricks and other studded pieces
 
-![Upper Remover](/pictures/gif_04.gif)
+![Upper Remover](/pictures/gif_4.gif)
 
 ### How does it work?
 

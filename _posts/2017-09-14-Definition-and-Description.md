@@ -25,7 +25,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 #### The Tile Remover:
 
 * Physical Description: It looks like a flathead screwdriver being used as a wedge.
-* Dimensions: 5.5’’ x 0.1’’
+* Dimensions: 5.5'' x 0.1''
 * Function: Pry apart tile and other non-studded pieces
 
 ![Tile Remover](/pictures/gif_01.gif)
@@ -33,7 +33,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 #### The Ridged Handle:
 
 * Physical Description: Seven ridges lined up in a 4’’ x 0.5’’ section at a 35° angle
-* Dimensions: 4’’ x 0.5’’
+* Dimensions: 4'' x 0.5''
 * Function: Allows a strong, angled grip for maximum torque
 
 #### The Technic Remover:
@@ -42,7 +42,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Stud
 * Function: Separates Technic Axles and Pins from Lego Beams and Gears 
 
-![Technic Remover](/pictures/gif_2.gif)
+![Technic Remover](/pictures/gif_02.gif)
 
 #### The Lower Brick/Plate Remover:
 
@@ -50,7 +50,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Plate
 * Function: Separates Plates from Bricks and other studded pieces 
 
-![Lower Remover](/pictures/gif_3.gif)
+![Lower Remover](/pictures/gif_03.gif)
 
 #### The Upper Brick/Plate Remover:
 
@@ -58,7 +58,7 @@ thermoplastic polymer. It resembles other Lego pieces and can even be used withi
 * Dimensions: 2x1 Lego Plate
 * Function: Separates Plates from Bricks and other studded pieces
 
-![Upper Remover](/pictures/gif_4.gif)
+![Upper Remover](/pictures/gif_04.gif)
 
 ### How does it work?
 

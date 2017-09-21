@@ -66,8 +66,8 @@ This 4-in-1 tool works thanks to physics, specifically the way wedges amplify fo
 how fulcrums extend the center of rotation to create leverage, and the Pauli 
 exclusion principle. 
 
-Without getting too much into the alphabet-ridden mathematics, the wedge (Title Remover) 
-simply allows more pressure to separate the Lego pieces by reducing movement.
+Without getting too much into the alphabet-ridden mathematics, Title Remover acts a wedge which 
+simply creates more pressure by reducing movement, seperating the Lego pices with much less effort.
 
 Similarly, the Upper and Lower Brick/Plate Removers act as extensions to the pieces they connect 
 to and create a mechanical advantage that cannot be achieved by fingernail or tooth alone. The 

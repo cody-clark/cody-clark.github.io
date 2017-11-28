@@ -43,7 +43,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. In the upper middle page, click Settings.
 1. Under Repository name, type username.github.io.
 
-> > **Note:** Replace username with your actual username. This will be your site’s URL.
+> **Note:** Replace username with your actual username. This will be your site’s URL.
 
 **Customizing Your Site**
 

@@ -47,7 +47,8 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 ## **Customizing Your Site**
 
-1. Delete the Placeholder Pages
+**Delete the Placeholder Pages**
+
 1. From your Repository page, **click _posts**.
 1. Click **2012-05-22-readability-post.md**.
 1. On the right side of the page, click the trashcan icon.

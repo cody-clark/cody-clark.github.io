@@ -79,7 +79,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. From your Repository page, click **about**, then click **index.md**.
 1. Click the pencil icon to edit the file. 
 1. Use the description you wrote earlier, or write something else. 
-1. For text formatting options using Markdown, please refer to [this page](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
+   > **Note:** For text formatting options using Markdown, please refer to [this page](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
 
 ### **Add a Blog post**
 1. From your Repository page, click **_posts**, then click **Create new file**.

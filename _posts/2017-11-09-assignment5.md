@@ -20,18 +20,18 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. In the upper right-hand corner, click Sign up.
 1. Enter your Username, Email address, and Password in the respective fields, then click Create an account.
 
-> **Note:** Your Username will be your site’s URL, so make sure your username reflects you and your personal brand. For example: codyjtclark.github.io  
+   > **Note:** Your Username will be your site’s URL, so make sure your username reflects you and your personal brand. For example: codyjtclark.github.io  
 
 1. Select the free plan, Unlimited public repositories for free, if it already isn’t checked, then click Continue.
 1. Scroll down to the bottom of the page if necessary, then click skip this step.
 
-> **Note:** Never give information if you’re not required to. 
+   > **Note:** Never give information if you’re not required to. 
 
 **Find a Theme and Fork the Repository**
 
 1. Go to http://jekyllthemes.org/themes/moon/, then click Homepage.
 	
-> **Note:** You can browse more themes at jekyllthemes.org. While setting up hosting on Github and editing certain files will be the same, other features may not be available. 
+   > **Note:** You can browse more themes at jekyllthemes.org. While setting up hosting on Github and editing certain files will be the same, other features may not be available. 
 
 1. In the upper right-hand corner, click Fork.
 1. Verify your email address if prompted. 
@@ -43,7 +43,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. In the upper middle page, click Settings.
 1. Under Repository name, type username.github.io.
 
-> **Note:** Replace username with your actual username. This will be your site’s URL.
+   > **Note:** Replace username with your actual username. This will be your site’s URL.
 
 **Customizing Your Site**
 
@@ -53,7 +53,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. On the right side of the page, click the trashcan icon.
 1. Scroll down, then click Commit changes.
 
-> **Note:** It’s bad practice to directly merge changes to the Master, but best Git practices are out of the scope of this tutorial. 
+   > **Note:** It’s bad practice to directly merge changes to the Master, but best Git practices are out of the scope of this tutorial. 
 
 1. Repeat these steps until all of the pages are deleted.
 
@@ -65,11 +65,11 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. Change the Bio to your tagline. 
 1. Change the Description to fit you.
 
-> > **Note:** This Description will be used to describe your site as it appears in Google search results. Once the Google crawlers log this description, it will not change until your site is crawled again. Definitely proofread this. 
+   > **Note:** This Description will be used to describe your site as it appears in Google search results. Once the Google crawlers log this description, it will not change until your site is crawled again. Definitely proofread this. 
 
 1. Scroll down until you see # Social. 
 
-> > **Note:** The octothorp (#) tells the file not to render the text by rendering the line as a comment. If you don’t have an account or don’t want to link to it from your portfolio, just add a # to the beginning of the line. Similarly, if you want to link to an account, delete the # then replace username with your account’s username.   
+   > **Note:** The octothorp (#) tells the file not to render the text by rendering the line as a comment. If you don’t have an account or don’t want to link to it from your portfolio, just add a # to the beginning of the line. Similarly, if you want to link to an account, delete the # then replace username with your account’s username.   
 
 1. When you’re finished, scroll down, then click Commit changes.
 

@@ -8,7 +8,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 ## Objectives
 
-1. Create an online portfolio for free to showcase your work 
+1. Create an [online portfolio](http://borzecki.github.io/) for free to showcase your work 
 1. Customize your site without coding or using any WYSIWYG editors
 1. Use Markdown to add your portfolio pieces
 
@@ -31,7 +31,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 1. Go to http://jekyllthemes.org/themes/moon/, then click **Homepage**.
 	
-   > **Note:** You can browse more themes at jekyllthemes.org. While setting up hosting on Github and editing certain files will be the same, other features may not be available. 
+   > **Note:** You can browse more themes at [jekyllthemes.org](jekyllthemes.org). While setting up hosting on Github and editing certain files will be the same, other features may not be available. 
 
 1. In the upper right-hand corner, click **Fork**.
 1. Verify your email address if prompted. 

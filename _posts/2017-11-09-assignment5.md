@@ -45,7 +45,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
    > **Note:** Replace username with your actual username. This will be your site’s URL.
 
-### **Customizing Your Site**
+## **Customizing Your Site**
 
 1. Delete the Placeholder Pages
 1. From your Repository page, **click _posts**.

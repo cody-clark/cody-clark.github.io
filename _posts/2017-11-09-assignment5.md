@@ -14,7 +14,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 ## Getting Started
 
-**Create a Github Account**
+### **Create a Github Account**
 
 1. Go to [github.com](https://github.com/).
 1. In the upper right-hand corner, click **Sign up**.
@@ -27,7 +27,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
    > **Note:** Never give information if you’re not required to. 
 
-**Find a Theme and Fork the Repository**
+### **Find a Theme and Fork the Repository**
 
 1. Go to http://jekyllthemes.org/themes/moon/, then click **Homepage**.
 	
@@ -36,7 +36,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. In the upper right-hand corner, click **Fork**.
 1. Verify your email address if prompted. 
 
-**Change the Repository Name to username.github.io**
+### **Change the Repository Name to username.github.io**
 
 1. Go to github.com/YourUsername
 1. Click on your newly forked repository.
@@ -45,7 +45,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
    > **Note:** Replace username with your actual username. This will be your site’s URL.
 
-**Customizing Your Site**
+### **Customizing Your Site**
 
 1. Delete the Placeholder Pages
 1. From your Repository page, **click _posts**.
@@ -57,7 +57,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 1. Repeat these steps until all of the pages are deleted.
 
-**Edit the _config.yml**
+### **Edit the _config.yml**
 
 1. From your Repository page, click **_config.yml**.
 1. Click the pencil icon to edit the file.
@@ -73,14 +73,14 @@ Jekyll is a static site generator that can easily build websites by running a si
 
 1. When you’re finished, scroll down, then click **Commit changes**.
 
-**Edit the about.md page**
+### **Edit the about.md page**
 
 1. From your Repository page, click **about**, then click **index.md**.
 1. Click the pencil icon to edit the file. 
 1. Use the description you wrote earlier, or write something else. 
 1. For text formatting options using Markdown, please refer to [this page](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
 
-**Add a Blog post**
+### **Add a Blog post**
 1. From your Repository page, click **_posts**, then click **Create new file**.
 1. Name your file with the following format: year-month-day-postname.md
 1. Copy and paste the following into the beginning of your document:
@@ -101,7 +101,7 @@ Jekyll is a static site generator that can easily build websites by running a si
 1. Scroll down, then click Commit new file.
 1. Repeat these steps to add more blog posts.	
 
-**Add a Project post**
+### **Add a Project post**
 1. From your Repository page, click **_posts**, then click **Create new file**.
 1. Name your file with the following format: year-month-day-projectname.md
 1. Copy and paste the following into the beginning of your document:
